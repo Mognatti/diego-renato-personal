@@ -37,9 +37,3 @@ export const SelfImage = styled.img`
   height: 728px;
   opacity: 0.7;
 `;
-
-export const Row = styled.div`
-  width: 100%;
-  height: 5vh;
-  background-color: ${(props) => props.theme.colors.primary};
-`;

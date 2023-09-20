@@ -1,11 +1,13 @@
 import Main from "./Components/Main";
-import Method from "./Components/Method";
+import Plans from "./Components/Plans";
+import SellingPoints from "./Components/SellingPoints";
 
 export default function Home() {
   return (
     <>
       <Main />
-      <Method />
+      <SellingPoints />
+      <Plans />
     </>
   );
 }

@@ -1,5 +1,5 @@
 import * as S from "./styles";
-
+import * as GS from "../../../../styles/reusable";
 export default function Main() {
   return (
     <>
@@ -15,7 +15,7 @@ export default function Main() {
           alt="self_image"
         />
       </S.Container>
-      <S.Row />
+      <GS.DivRow />
     </>
   );
 }

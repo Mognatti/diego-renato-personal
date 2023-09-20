@@ -10,7 +10,15 @@ export const theme = {
     title: "4em",
     bigger: "3em",
     big: "2em",
+    highlight: "1.3em",
     regular: "1em",
     small: "0.7em",
   },
+};
+
+export const opacityHex = {
+  70: "B3",
+  60: "99",
+  50: "80",
+  40: "66",
 };
