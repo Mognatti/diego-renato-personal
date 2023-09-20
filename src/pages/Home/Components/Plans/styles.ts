@@ -1,5 +1,14 @@
 import styled from "styled-components";
 
+export const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin: 3vh 5vw 0 5vw;
+`;
+export const Disclaimer = styled.p`
+  font-size: ${(props) => props.theme.fontSize.highlight};
+  text-align: justify;
+`;
 export const List = styled.ul`
   display: flex;
   flex-direction: column;
@@ -39,7 +48,7 @@ export const Card = styled.div`
   width: 270px;
   height: 300px;
   background-color: ${(props) => props.theme.colors.secondary};
-  box-shadow: 0 0 50px #282828;
+  box-shadow: 0 0 15px #242424;
   &:nth-of-type(2) {
     height: 350px;
     width: 300px;
@@ -73,4 +82,9 @@ export const CardData = styled.p`
   width: 160px;
   text-align: center;
   font-size: 1.15em;
+  &:nth-last-of-type(1) {
+    font-size: 0.8em;
+    border: none;
+    margin-top: 1vh;
+  }
 `;

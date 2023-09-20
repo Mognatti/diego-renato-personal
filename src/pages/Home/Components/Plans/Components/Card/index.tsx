@@ -31,6 +31,7 @@ export default function PlanCard({ item }: PlanCardProps) {
             <S.CardCenterDiv>
               <S.CardData>{plan.days}</S.CardData>
               <S.CardData>{plan.regularity}</S.CardData>
+              <S.CardData>*Plano trimestral</S.CardData>
             </S.CardCenterDiv>
           </S.Card>
         ))}

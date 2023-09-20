@@ -2,7 +2,7 @@ import * as GS from "../../../../styles/reusable";
 import PlanCard from "./Components/Card";
 import * as S from "./styles";
 export default function Plans() {
-  const topPlans = [
+  const allPlans = [
     {
       type: {
         title: "Com atendimento nutricional",
@@ -49,7 +49,7 @@ export default function Plans() {
             name: "Plus",
             days: "8 dias",
             regularity: "2x por semana",
-            value: "R$ 450,00",
+            value: "R$ 800,00",
           },
           {
             id: 6,
@@ -64,22 +64,29 @@ export default function Plans() {
   ];
 
   return (
-    <GS.Container>
+    <S.Container>
       <GS.Title>Planos</GS.Title>
-      <div>
-        <p>
-          Os planos oferecidos são fornecidos pelos valores abaixo de forma
-          trimestral. Caso tenha interesse em um plano mensal ou anual, podemos
-          negociar, entáo não hesite em me chamar no whatsapp para cuidarmos da
-          sua saúde o quanto antes!
-        </p>
-      </div>
+      <S.Disclaimer>
+        O resultado torna-se visível somente depois do esforço. Tendo em vista
+        essa mentalidade, os planos forenecidos seguem o modelo
+        <span style={{ color: "#96C83E" }}> Trimestral</span>. Caso você esteja
+        ainda mais compromissado e apto para ingressar em um planejamento
+        semestral ou anual, podemos negociar. Sendo assim, não hesite em me
+        contactar. Vamos juntos!
+      </S.Disclaimer>
+      <S.Disclaimer>
+        Os planos são dividos em duas categorias: Com atendimento nutricional ou
+        sem atendimento nutricional. Caso opte pelo pacote mais completo, será
+        acompanhando nos treinos por mim e a sua dieta será organizada pela Dra.
+        Camila Mognatti, que possui mais de{" "}
+        <span style={{ color: "#96C83E" }}>10 anos de experiência</span>!
+      </S.Disclaimer>
       <S.List>
-        {topPlans.map((item) => (
+        {allPlans.map((item) => (
           <PlanCard key={item.type.title} {...{ item }} />
         ))}
       </S.List>
-    </GS.Container>
+    </S.Container>
   );
 }
 
