@@ -10,7 +10,7 @@ export default function Header() {
           <S.LinkDiv>
             {navLinks.map((link) => (
               <S.LinkWrapper key={link.id}>
-                <S.StyledLink to={link.to}>{link.label}</S.StyledLink>
+                <S.StyledLink href={link.to}>{link.label}</S.StyledLink>
               </S.LinkWrapper>
             ))}
           </S.LinkDiv>

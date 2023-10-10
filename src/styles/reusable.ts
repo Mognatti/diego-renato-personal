@@ -1,10 +1,11 @@
 import { styled } from "styled-components";
+import { BiLogoInstagram, BiLogoWhatsapp } from "react-icons/bi";
+import { AiOutlineMail } from "react-icons/ai";
 
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
   margin: 3vh 5vw 0 5vw;
-  height: 97vh;
 `;
 
 export const Title = styled.h1`
@@ -21,3 +22,7 @@ export const DivRow = styled.div`
   opacity: 0.7;
   background-color: ${(props) => props.theme.colors.primary};
 `;
+
+export const InstaLogo = styled(BiLogoInstagram)``;
+export const WhatsLogo = styled(BiLogoWhatsapp)``;
+export const EmailLogo = styled(AiOutlineMail)``;

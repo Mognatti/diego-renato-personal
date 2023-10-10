@@ -3,7 +3,7 @@ import * as GS from "../../../../styles/reusable";
 export default function Main() {
   return (
     <>
-      <S.Container>
+      <S.Container id="home">
         <S.TitleWrapper>
           <S.Title>
             <S.FirstName>Diego</S.FirstName> <S.LastName>Renato</S.LastName>

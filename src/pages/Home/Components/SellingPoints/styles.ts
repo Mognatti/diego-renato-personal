@@ -1,56 +1,45 @@
 import { styled } from "styled-components";
-import { AiFillCheckCircle } from "react-icons/ai";
-
-export const CheckIcon = styled(AiFillCheckCircle)`
-  width: 200px;
-  margin-left: -15px;
-  color: ${(props) => props.theme.colors.primary};
-`;
 
 export const List = styled.ul`
   display: flex;
-  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
-  justify-content: space-around;
-  margin-top: -2vh;
-  height: 100vh;
-  width: 100%;
-  gap: 2vw;
-  padding: 0;
+  margin-top: 10vh;
+  gap: 3vw;
 `;
 
 export const Card = styled.div`
   display: flex;
   flex-direction: column;
-  text-align: justify;
-  align-items: center;
-  width: 330px;
-  height: 475px;
-  padding: 16px;
-  gap: 2vh;
+  box-shadow: 0 0 15px ${(props) => props.theme.colors.secondary};
+  width: 30%;
+  border-radius: 16px;
+  padding: 8px;
+  &:nth-of-type(2) {
+    box-shadow: 0 0 15px ${(props) => props.theme.colors.primary};
+  }
 `;
 
-export const OutlineDiv = styled.div`
-  position: absolute;
-  outline: 1px solid ${(props) => props.theme.colors.primary};
-  top: 135%;
-  height: 480px;
-  width: 380px;
-  opacity: 0.6;
-  box-shadow: 0 0 20px ${(props) => props.theme.colors.primary};
-`;
-
-export const CardText = styled.p`
-  margin: 0;
-  line-height: 2em;
-  font-size: ${(props) => props.theme.fontSize.highlight};
-  color: ${(props) => props.theme.colors.text};
-`;
-
-export const SpanTest = styled.span`
+export const CardHeader = styled.div`
+  height: 70px;
   color: ${(props) => props.theme.colors.primary};
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8em;
+  padding: 8px;
 `;
 
+export const CardBody = styled.div`
+  display: flex;
+  text-align: justify;
+  color: ${(props) => props.theme.colors.text};
+  height: 350px;
+  font-size: 1.3em;
+  line-height: 180%;
+  border-radius: 0 0 16px 16px;
+  padding: 24px;
+`;
 export const Banner = styled.img`
   width: 99vw;
   opacity: 0.7;

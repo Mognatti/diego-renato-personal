@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { styled } from "styled-components";
 
 export const Container = styled.div`
@@ -28,13 +27,12 @@ export const LinkDiv = styled.div`
 `;
 
 export const LinkWrapper = styled.div`
-  width: 80px;
+  width: 100px;
   display: flex;
-  justify-items: center;
   justify-content: center;
 `;
 
-export const StyledLink = styled(Link)`
+export const StyledLink = styled.a`
   text-decoration: none;
   color: ${(props) => props.theme.colors.text};
   border-bottom: 1px solid ${(props) => props.theme.colors.action};

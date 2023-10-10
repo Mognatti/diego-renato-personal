@@ -4,6 +4,7 @@ export const Global = createGlobalStyle`
 html {
     padding: 0;
     margin: 0;
+    scroll-behavior: smooth;
 }
 body{
 margin: 0;

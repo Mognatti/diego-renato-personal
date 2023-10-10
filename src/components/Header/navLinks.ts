@@ -2,16 +2,21 @@ export const navLinks = [
   {
     id: 1,
     label: "Home",
-    to: "/",
+    to: "#home",
   },
   {
     id: 2,
-    label: "Planos",
-    to: "/planos",
+    label: "Sobre Mim",
+    to: "#sobre-mim",
   },
   {
     id: 3,
-    label: "Benefícios",
-    to: "/beneficios",
+    label: "Planilha",
+    to: "#planilha",
+  },
+  {
+    id: 4,
+    label: "Planos",
+    to: "#plans",
   },
 ];

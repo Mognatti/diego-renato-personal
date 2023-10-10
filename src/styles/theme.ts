@@ -8,8 +8,8 @@ export const theme = {
   },
   fontSize: {
     title: "4em",
-    bigger: "3em",
-    big: "2em",
+    bigger: "2.1em",
+    big: "1.8em",
     highlight: "1.3em",
     regular: "1em",
     small: "0.7em",
