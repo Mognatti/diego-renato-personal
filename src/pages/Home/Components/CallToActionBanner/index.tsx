@@ -8,13 +8,13 @@ export default function CallToActionBanner() {
       </S.CallToActionText>
       <S.CallToActionButtonSection>
         <a href="https://bit.ly/whatsapp_diego_renato_personal" target="_blank">
-          <S.ImgBanner src="/images/whatsapp_banner.png" />
+          <S.ImgBanner src="/images/whatsapp_banner_filled.png" />
         </a>
         <a
           href="https://www.instagram.com/diegorenatopersonal/"
           target="_blank"
         >
-          <S.ImgBanner src="/images/Instagram_banner.png" />
+          <S.ImgBanner src="/images/Instagram_banner_filled.png" />
         </a>
       </S.CallToActionButtonSection>
     </S.CallToActionDiv>

@@ -42,8 +42,6 @@ export const Item = styled.li`
   text-align: justify;
   gap: 1.5vh;
   background-color: transparent;
-  outline: 1px solid ${(props) => props.theme.colors.secondary};
-  box-shadow: 0 0 15px ${(props) => props.theme.colors.secondary};
   padding: 16px;
   border-radius: 8px;
   color: ${(props) => props.theme.colors.text};
@@ -59,4 +57,9 @@ export const ItemTitle = styled.div`
 
 export const ItemDesc = styled.div`
   text-align: justify;
+`;
+
+export const Banner = styled.img`
+  width: 99vw;
+  padding: 4vh 0;
 `;

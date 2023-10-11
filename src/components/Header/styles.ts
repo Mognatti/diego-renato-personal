@@ -1,10 +1,16 @@
 import { styled } from "styled-components";
+import { BsArrowUp } from "react-icons/bs";
 
-export const Container = styled.div`
+export const Container = styled.div<{ scrolling: string }>`
   display: flex;
   height: 8vh;
   width: 100%;
   align-items: center;
+  position: sticky;
+  top: 0;
+  background-color: ${(props) =>
+    props.scrolling === "true" ? `#121212` : "transparent"};
+  z-index: 9999;
 `;
 
 export const List = styled.ul`
@@ -39,5 +45,17 @@ export const StyledLink = styled.a`
   transition: 350ms;
   &:hover {
     padding: 0 8px;
+  }
+`;
+
+export const ArrowUpIcon = styled(BsArrowUp)<{ show: string }>`
+  cursor: pointer;
+  position: absolute;
+  right: 3%;
+  color: ${(props) => props.theme.colors.primary};
+  transition: 350ms;
+  opacity: ${(props) => (props.show === "true" ? 1 : 0)};
+  &:hover {
+    transform: scale(1.3);
   }
 `;

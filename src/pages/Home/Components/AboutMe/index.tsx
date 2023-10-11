@@ -22,9 +22,32 @@ export default function AboutMe() {
     },
   ];
 
+  const SellingPoints = [
+    {
+      id: 1,
+      icon: <S.FingerIcon size="40" />,
+      desc: `Treinamento Personalizado`,
+    },
+    {
+      id: 2,
+      icon: <S.HealthIcon size="40" />,
+      desc: `Desenvolvimento Saudável`,
+    },
+    {
+      id: 3,
+      icon: <S.ClockIcon size="40" />,
+      desc: `Flexibilidade de horários`,
+    },
+    {
+      id: 4,
+      icon: <S.FruitIcon size="40" />,
+      desc: `Atendimento nutricional`,
+    },
+  ];
+
   return (
     <>
-      <GS.Container style={{ height: "98vh" }}>
+      <GS.Container id="sobre-mim" style={{ height: "98vh" }}>
         <GS.Title>Conheça o seu treinador</GS.Title>
         <S.ContentContainer>
           <S.Image
@@ -37,12 +60,20 @@ export default function AboutMe() {
             {text.map((item) => (
               <S.Text key={item.id}>{item.desc}</S.Text>
             ))}
-            <br />
+
             <S.Text style={{ textAlign: "end", color: "#96c83e" }}>
               Vamos juntos!
             </S.Text>
           </div>
         </S.ContentContainer>
+        <S.List>
+          {SellingPoints.map((item) => (
+            <S.Item key={item.id}>
+              {item.icon}
+              {item.desc}
+            </S.Item>
+          ))}
+        </S.List>
       </GS.Container>
       <GS.DivRow />
     </>

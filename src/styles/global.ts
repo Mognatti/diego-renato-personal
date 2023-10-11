@@ -5,6 +5,14 @@ html {
     padding: 0;
     margin: 0;
     scroll-behavior: smooth;
+    ::-webkit-scrollbar {
+     width: 5px;
+    }
+    ::-webkit-scrollbar-thumb {
+    background: ${(props) => props.theme.colors.primary}; 
+    border-radius: 10px;
+    }
+    
 }
 body{
 margin: 0;
