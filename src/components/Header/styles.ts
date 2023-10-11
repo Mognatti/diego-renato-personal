@@ -49,7 +49,7 @@ export const StyledLink = styled.a`
 `;
 
 export const ArrowUpIcon = styled(BsArrowUp)<{ show: string }>`
-  cursor: pointer;
+  cursor: ${(props) => (props.show === "true" ? "pointer" : "default")};
   position: absolute;
   right: 3%;
   color: ${(props) => props.theme.colors.primary};
