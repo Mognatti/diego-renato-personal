@@ -1,5 +1,4 @@
 import * as GS from "../../../../styles/reusable";
-import CallToActionBanner from "../CallToActionBanner";
 import * as S from "./styles";
 
 const cardContent = [
@@ -58,7 +57,6 @@ export default function SpreadSheet() {
           ))}
         </S.List>
         <br />
-        <CallToActionBanner />
       </GS.Container>
       <br />
       <S.Banner src="/images/diego_banner_edited.jpg" alt="banner" />

@@ -26,6 +26,10 @@ export const CallToActionButtonSection = styled.div`
 export const ImgBanner = styled.img`
   width: 400px;
   height: 128px;
+  transition: 350ms;
+  &:hover {
+    transform: scale(1.05);
+  }
 `;
 
 export const CallToActionButton = styled.button`
