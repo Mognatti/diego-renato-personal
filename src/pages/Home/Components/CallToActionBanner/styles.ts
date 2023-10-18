@@ -42,6 +42,10 @@ export const ImgBanner = styled.img`
     width: 190px;
     height: 60px;
   }
+  @media (max-width: ${breakingPoints.mobile}) {
+    width: 165px;
+    height: 52px;
+  }
 `;
 
 export const CallToActionButton = styled.button`

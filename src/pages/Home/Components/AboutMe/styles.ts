@@ -37,6 +37,9 @@ export const Image = styled.img`
   @media (max-width: ${breakingPoints.bigPhone}) {
     width: 350px;
   }
+  @media (max-width: ${breakingPoints.mobile}) {
+    width: 320px;
+  }
 `;
 
 export const Text = styled.p`

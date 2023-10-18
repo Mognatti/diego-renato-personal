@@ -28,4 +28,5 @@ export const breakingPoints = {
   bigTablet: "830px",
   smallTablet: "768px",
   bigPhone: "500px",
+  mobile: "400px",
 };

@@ -1,6 +1,7 @@
 import { styled } from "styled-components";
 import { BsArrowUp } from "react-icons/bs";
 import { RxHamburgerMenu } from "react-icons/rx";
+import { breakingPoints } from "../../styles/theme";
 
 export const Container = styled.div<{ scrolling: string }>`
   display: flex;
@@ -62,11 +63,17 @@ export const ArrowUpIcon = styled(BsArrowUp)<{ show: string }>`
 `;
 
 export const HamburguerIcon = styled(RxHamburgerMenu)<{ show: boolean }>`
-  color: ${(props) => props.theme.colors.primary};
+  color: ${(props) =>
+    props.show
+      ? `${props.theme.colors.secondary}`
+      : `${props.theme.colors.primary}`};
   position: fixed;
   top: 24px;
   transition: 350ms;
   left: ${(props) => (props.show ? "120px" : "100px")};
+  @media (max-width: ${breakingPoints.mobile}) {
+    top: 18px;
+  }
 `;
 
 export const MobileMenu = styled.div<{ show: boolean }>`
@@ -78,12 +85,15 @@ export const MobileMenu = styled.div<{ show: boolean }>`
   width: 140px;
   border-radius: 8px;
   padding: 16px;
+  @media (max-width: ${breakingPoints.mobile}) {
+    margin-left: 2vw;
+    margin-top: 12vh;
+  }
 `;
 
 export const MobileMenuLinks = styled.a`
   color: ${(props) => props.theme.colors.secondary};
   margin-left: 10vw;
-  border-bottom: 1px solid;
   width: 85px;
   text-align: center;
 `;

@@ -43,6 +43,9 @@ export const Title = styled.h3`
     position: absolute;
     margin-left: 2vw;
   }
+  @media (max-width: ${breakingPoints.mobile}) {
+    font-size: 1.5em;
+  }
 `;
 
 export const PlanList = styled.ul`
