@@ -12,7 +12,6 @@ export default function Header() {
   function handleHamburguerClick() {
     setShowMobileMenu(!showMobileMenu);
   }
-
   function handleArrowClick() {
     window.scrollTo({ top: 0 });
   }
