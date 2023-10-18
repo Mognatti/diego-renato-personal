@@ -1,4 +1,5 @@
 import { styled } from "styled-components";
+import { breakingPoints } from "../../../../styles/theme";
 
 export const CallToActionDiv = styled.div`
   display: flex;
@@ -13,6 +14,9 @@ export const CallToActionDiv = styled.div`
 export const CallToActionText = styled.p`
   font-size: 1.5em;
   margin: 8px 0;
+  @media (max-width: ${breakingPoints.bigPhone}) {
+    text-align: center;
+  }
 `;
 
 export const CallToActionButtonSection = styled.div`
@@ -29,6 +33,14 @@ export const ImgBanner = styled.img`
   transition: 350ms;
   &:hover {
     transform: scale(1.05);
+  }
+  @media (max-width: ${breakingPoints.bigTablet}) {
+    width: 300px;
+    height: 93px;
+  }
+  @media (max-width: ${breakingPoints.bigPhone}) {
+    width: 190px;
+    height: 60px;
   }
 `;
 

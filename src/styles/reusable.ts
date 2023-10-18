@@ -1,6 +1,7 @@
 import { styled } from "styled-components";
 import { BiLogoInstagram, BiLogoWhatsapp } from "react-icons/bi";
 import { AiOutlineMail } from "react-icons/ai";
+import { breakingPoints } from "./theme";
 
 export const Container = styled.div`
   display: flex;
@@ -14,6 +15,12 @@ export const Title = styled.h1`
   font-size: ${(props) => props.theme.fontSize.title};
   color: ${(props) => props.theme.colors.text};
   border-bottom: 1px solid ${(props) => props.theme.colors.primary};
+  @media (max-width: ${breakingPoints.smallPC}) {
+    font-size: 3em;
+  }
+  @media (max-width: ${breakingPoints.bigPhone}) {
+    font-size: ${(props) => props.theme.fontSize.big};
+  }
 `;
 
 export const DivRow = styled.div`

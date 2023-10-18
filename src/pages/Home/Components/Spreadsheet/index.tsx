@@ -1,3 +1,4 @@
+import useWindowSize from "../../../../hooks/useWindowSize";
 import * as GS from "../../../../styles/reusable";
 import * as S from "./styles";
 
@@ -24,8 +25,10 @@ const cardContent = [
     `,
   },
 ];
-
+const changeBannerImageWidth = 700;
 export default function SpreadSheet() {
+  const [{ windowSize }] = useWindowSize();
+
   return (
     <>
       <GS.Container id="planilha">
@@ -41,7 +44,12 @@ export default function SpreadSheet() {
             em consideração tudo a sua rotina e seu histórico de saúde, visando
             alcançar o seu objetivo de forma rápida e segura!
           </S.Text>
-          <S.BannerImg src="/images/DR_Planilha.png" />
+          <a
+            href="https://bit.ly/whatsapp_diego_renato_personal"
+            target="_blank"
+          >
+            <S.PriceImg src="/images/DR_Planilha.png" />
+          </a>
         </S.Content>
         <S.Text>
           Com a Planilha de Treino você tem a solução definitiva para conquistar
@@ -59,7 +67,14 @@ export default function SpreadSheet() {
         <br />
       </GS.Container>
       <br />
-      <S.Banner src="/images/diego_banner_edited.jpg" alt="banner" />
+      <S.Banner
+        src={
+          windowSize > changeBannerImageWidth
+            ? "/images/diego_banner_edited.jpg"
+            : "/images/diego_banner_edited_mobile.jpg"
+        }
+        alt="banner"
+      />
     </>
   );
 }

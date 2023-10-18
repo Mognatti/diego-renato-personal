@@ -87,6 +87,11 @@ export default function Plans() {
             <PlanCard key={item.type.title} {...{ item }} />
           ))}
         </S.List>
+        <S.Disclaimer>
+          *O pagamento pode ser feito à vista (dinheiro/ transferência bancária)
+          ou dividir uma parte em dinheiro e outra no Cartão crédito. Além
+          disso, podemos dividir em 3x Cartão de crédito + 5%
+        </S.Disclaimer>
       </S.Container>
       <br />
       <br />

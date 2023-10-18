@@ -1,3 +1,4 @@
+import { breakingPoints } from "./../../../../styles/theme";
 import styled from "styled-components";
 
 export const SubTitle = styled.h3`
@@ -5,6 +6,18 @@ export const SubTitle = styled.h3`
   font-weight: 400;
   font-size: ${(props) => props.theme.fontSize.big};
   margin: 4vh 0 2vh 0;
+  @media (max-width: ${breakingPoints.smallTablet}) {
+    text-align: center;
+    font-size: 1.5em;
+  }
+  @media (max-width: ${breakingPoints.smallTablet}) {
+    text-align: center;
+    font-size: 1.5em;
+  }
+  @media (max-width: ${breakingPoints.bigPhone}) {
+    text-align: justify;
+    font-size: ${(props) => props.theme.fontSize.highlight};
+  }
 `;
 
 export const Content = styled.div`
@@ -15,13 +28,20 @@ export const Content = styled.div`
 `;
 
 export const Text = styled.p`
-  font-size: ${(props) => props.theme.fontSize.highlight};
+  font-size: 1.2em;
   text-align: justify;
 `;
 
-export const BannerImg = styled.img`
+export const PriceImg = styled.img`
   width: 310px;
   margin-top: 4vh;
+  transition: 350ms;
+  &:hover {
+    transform: scale(1.05);
+  }
+  @media (max-width: ${breakingPoints.bigPhone}) {
+    width: 270px;
+  }
 `;
 
 export const List = styled.ul`
@@ -32,6 +52,13 @@ export const List = styled.ul`
   list-style: none;
   margin: 4vh 0 0 0;
   padding: 0;
+  @media (max-width: ${breakingPoints.bigTablet}) {
+    margin: 0 0 2vh 0;
+  }
+  @media (max-width: ${breakingPoints.bigPhone}) {
+    flex-wrap: wrap;
+    margin-bottom: -5vh;
+  }
 `;
 
 export const Item = styled.li`
@@ -45,6 +72,13 @@ export const Item = styled.li`
   padding: 16px;
   border-radius: 8px;
   color: ${(props) => props.theme.colors.text};
+  @media (max-width: ${breakingPoints.smallPC}) {
+    width: 28%;
+  }
+  @media (max-width: ${breakingPoints.bigPhone}) {
+    width: fit-content;
+    height: fit-content;
+  }
 `;
 
 export const ItemTitle = styled.div`
@@ -62,4 +96,7 @@ export const ItemDesc = styled.div`
 export const Banner = styled.img`
   width: 99vw;
   padding: 4vh 0;
+  @media (max-width: ${breakingPoints.bigPhone}) {
+    width: 100vw;
+  }
 `;

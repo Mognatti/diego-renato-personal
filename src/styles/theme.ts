@@ -22,3 +22,10 @@ export const opacityHex = {
   50: "80",
   40: "66",
 };
+
+export const breakingPoints = {
+  smallPC: "1024px",
+  bigTablet: "830px",
+  smallTablet: "768px",
+  bigPhone: "500px",
+};

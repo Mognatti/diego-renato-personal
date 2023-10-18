@@ -47,7 +47,7 @@ export default function AboutMe() {
 
   return (
     <>
-      <GS.Container id="sobre-mim" style={{ height: "98vh" }}>
+      <S.NewContainer id="sobre-mim">
         <GS.Title>Conheça o seu treinador</GS.Title>
         <S.ContentContainer>
           <S.Image
@@ -66,15 +66,15 @@ export default function AboutMe() {
             </S.Text>
           </div>
         </S.ContentContainer>
-        <S.List>
+        <S.IconList>
           {SellingPoints.map((item) => (
-            <S.Item key={item.id}>
+            <S.Icon key={item.id}>
               {item.icon}
               {item.desc}
-            </S.Item>
+            </S.Icon>
           ))}
-        </S.List>
-      </GS.Container>
+        </S.IconList>
+      </S.NewContainer>
       <GS.DivRow />
     </>
   );

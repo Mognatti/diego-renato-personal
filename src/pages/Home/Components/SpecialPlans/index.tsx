@@ -48,7 +48,12 @@ export default function SpecialPlans() {
           <S.PlanContainer key={plan.id}>
             <S.PlanTitle>{plan.title}</S.PlanTitle>
             <S.PlanDesc>{plan.desc}</S.PlanDesc>
-            {plan.banner}
+            <a
+              href="https://bit.ly/whatsapp_diego_renato_personal"
+              target="_blank"
+            >
+              {plan.banner}
+            </a>
           </S.PlanContainer>
         ))}
       </GS.Container>
@@ -56,5 +61,3 @@ export default function SpecialPlans() {
     </>
   );
 }
-
-// Pagamento pode ser feito: 1-à vista(dinheiro/ transferência bancária) 2- 1+2 ( dinheiro/ Cartão crédito) 3- 3x Cartão de crédito + 5%

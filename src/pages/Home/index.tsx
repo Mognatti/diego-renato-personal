@@ -9,7 +9,6 @@ export default function Home() {
     <>
       <Main />
       <AboutMe />
-      {/* <SellingPoints /> */}
       <SpreadSheet />
       <Plans />
       <SpecialPlans />

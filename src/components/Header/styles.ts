@@ -1,5 +1,6 @@
 import { styled } from "styled-components";
 import { BsArrowUp } from "react-icons/bs";
+import { RxHamburgerMenu } from "react-icons/rx";
 
 export const Container = styled.div<{ scrolling: string }>`
   display: flex;
@@ -58,4 +59,31 @@ export const ArrowUpIcon = styled(BsArrowUp)<{ show: string }>`
   &:hover {
     transform: scale(1.3);
   }
+`;
+
+export const HamburguerIcon = styled(RxHamburgerMenu)<{ show: boolean }>`
+  color: ${(props) => props.theme.colors.primary};
+  position: fixed;
+  top: 24px;
+  transition: 350ms;
+  left: ${(props) => (props.show ? "120px" : "100px")};
+`;
+
+export const MobileMenu = styled.div<{ show: boolean }>`
+  display: ${(props) => (props.show ? "flex" : "none")};
+  flex-direction: column;
+  gap: 1vh;
+  margin: 10vh 0 0 -2vw;
+  background-color: white;
+  width: 140px;
+  border-radius: 8px;
+  padding: 16px;
+`;
+
+export const MobileMenuLinks = styled.a`
+  color: ${(props) => props.theme.colors.secondary};
+  margin-left: 10vw;
+  border-bottom: 1px solid;
+  width: 85px;
+  text-align: center;
 `;
