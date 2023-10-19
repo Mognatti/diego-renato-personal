@@ -20,7 +20,7 @@ export default function Plans() {
             name: "Plus",
             days: "8 dias de treino",
             regularity: "2x por semana",
-            value: "R$ 880,00",
+            value: "R$ 850,00",
           },
           {
             id: 3,
@@ -42,14 +42,14 @@ export default function Plans() {
             name: "Básico",
             days: "4 dias de treino",
             regularity: "1x por semana",
-            value: "R$ 450,00",
+            value: "R$ 400,00",
           },
           {
             id: 5,
             name: "Plus",
             days: "8 dias de treino",
             regularity: "2x por semana",
-            value: "R$ 800,00",
+            value: "R$ 780,00",
           },
           {
             id: 6,
@@ -87,10 +87,18 @@ export default function Plans() {
             <PlanCard key={item.type.title} {...{ item }} />
           ))}
         </S.List>
+        <br />
         <S.Disclaimer>
-          *O pagamento pode ser feito à vista (dinheiro/ transferência bancária)
-          ou dividir uma parte em dinheiro e outra no Cartão crédito. Além
-          disso, podemos dividir em 3x Cartão de crédito + 5%
+          *O pagamento pode ser feito{" "}
+          <span style={{ color: "#96C83E" }}>à vista</span> (dinheiro/
+          transferência bancária) ou{" "}
+          <span style={{ color: "#96C83E" }}>
+            dividir uma parte em dinheiro e outra no cartão de crédito
+          </span>
+          . Além disso, podemos{" "}
+          <span style={{ color: "#96C83E" }}>
+            dividir em 3x cartão de crédito com acrécimo de 5% do valor
+          </span>
         </S.Disclaimer>
       </S.Container>
       <br />

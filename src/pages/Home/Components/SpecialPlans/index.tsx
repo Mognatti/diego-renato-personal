@@ -16,9 +16,15 @@ export default function SpecialPlans() {
       promo: `Plano Trimestral - R$ 1.600,00`,
       banner: (
         <S.BannerImg
-          src="/images/DRPremuim_Banner.png"
+          src="/images/drpremium_banner.png"
           alt="DR Premium Banner"
         />
+      ),
+      CTA: (
+        <S.ButtonPremium
+          src="/images/saiba_mais_premium.png"
+          alt="clique aqui"
+        ></S.ButtonPremium>
       ),
     },
     {
@@ -33,9 +39,15 @@ export default function SpecialPlans() {
       promo: `Plano Trimestral - R$ 580,00`,
       banner: (
         <S.BannerImg
-          src="/images/DR_em_casa_Banner.png"
+          src="/images/dremcasa_banner.png"
           alt="DR em casa Banner"
         />
+      ),
+      CTA: (
+        <S.Button
+          src="/images/saiba_mais_DRemcasa.png"
+          alt="clique aqui"
+        ></S.Button>
       ),
     },
   ];
@@ -48,12 +60,15 @@ export default function SpecialPlans() {
           <S.PlanContainer key={plan.id}>
             <S.PlanTitle>{plan.title}</S.PlanTitle>
             <S.PlanDesc>{plan.desc}</S.PlanDesc>
-            <a
-              href="https://bit.ly/whatsapp_diego_renato_personal"
-              target="_blank"
-            >
+            <S.BannerContainer>
+              <S.ButtonLink
+                href="https://bit.ly/whatsapp_diego_renato_personal"
+                target="_blank"
+              >
+                {plan.CTA}
+              </S.ButtonLink>
               {plan.banner}
-            </a>
+            </S.BannerContainer>
           </S.PlanContainer>
         ))}
       </GS.Container>

@@ -44,11 +44,12 @@ export default function SpreadSheet() {
             em consideração tudo a sua rotina e seu histórico de saúde, visando
             alcançar o seu objetivo de forma rápida e segura!
           </S.Text>
+          <S.BannerImg src="/images/drplanilha_banner.png" />
           <a
             href="https://bit.ly/whatsapp_diego_renato_personal"
             target="_blank"
           >
-            <S.PriceImg src="/images/DR_Planilha.png" />
+            <S.Buttom src="/images/saiba_mais_planilia.png" alt="clique aqui" />
           </a>
         </S.Content>
         <S.Text>

@@ -32,15 +32,39 @@ export const Text = styled.p`
   text-align: justify;
 `;
 
-export const PriceImg = styled.img`
+export const BannerImg = styled.img`
   width: 310px;
   margin-top: 4vh;
+  @media (max-width: ${breakingPoints.bigPhone}) {
+    width: 270px;
+  }
+`;
+
+export const LinkButtom = styled.a``;
+
+export const Buttom = styled.img`
+  width: 150px;
+  position: absolute;
+  left: 45%;
+  margin-top: -120px;
   transition: 350ms;
   &:hover {
     transform: scale(1.05);
   }
+  @media (max-width: ${breakingPoints.smallPC}) {
+    left: 42.5%;
+    margin-top: -118px;
+  }
+  @media (max-width: ${breakingPoints.bigTablet}) {
+    left: 40.5%;
+  }
   @media (max-width: ${breakingPoints.bigPhone}) {
-    width: 270px;
+    width: 140px;
+    left: 33%;
+    margin-top: -105px;
+  }
+  @media (max-width: ${breakingPoints.mobile}) {
+    left: 30%;
   }
 `;
 
