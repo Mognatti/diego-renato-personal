@@ -26,7 +26,7 @@ export default function PlanCard({ item }: PlanCardProps) {
             <S.CardTitle>{plan.name}</S.CardTitle>
             <S.CardPrice>
               {plan.value}
-              <span style={{ fontSize: "1rem" }}>/mês</span>
+              <span style={{ fontSize: "1rem" }}>/aula</span>
             </S.CardPrice>
             <S.CardCenterDiv>
               <S.CardData>{plan.days}</S.CardData>

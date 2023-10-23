@@ -1,5 +1,9 @@
 import { breakingPoints } from "./../../../../styles/theme";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
+
+css`
+  @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300&display=swap");
+`;
 
 export const Container = styled.div`
   display: flex;
@@ -93,6 +97,7 @@ export const CardPrice = styled.h1`
   @media (max-width: ${breakingPoints.smallTablet}) {
     font-size: 1.7em;
   }
+  font-weight: 500;
 `;
 
 export const CardCenterDiv = styled.div`
