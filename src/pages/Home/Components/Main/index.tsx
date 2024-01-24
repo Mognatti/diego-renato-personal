@@ -10,10 +10,7 @@ export default function Main() {
           </S.Title>
           <S.SubTitle>Treinamento especializado</S.SubTitle>
         </S.TitleWrapper>
-        <S.SelfImage
-          src="/images/diego_cross_arms_edited.png"
-          alt="self_image"
-        />
+        <S.SelfImage src="/images/diego_cross_arms_edited.png" alt="self_image" />
       </S.Container>
       <GS.DivRow />
     </>

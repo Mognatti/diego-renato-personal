@@ -51,13 +51,13 @@ export const SubTitle = styled.p`
 `;
 
 export const SelfImage = styled.img`
-  height: 90vh;
+  height: 90svh;
   opacity: 0.7;
   @media (max-width: ${breakingPoints.smallPC}) {
-    height: 70vh;
+    height: 70svh;
   }
   @media (max-width: ${breakingPoints.bigTablet}) {
-    height: 40vh;
+    height: 40svh;
   }
   @media (max-width: ${breakingPoints.bigPhone}) {
     height: 45vh;

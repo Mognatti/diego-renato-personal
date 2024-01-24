@@ -10,8 +10,9 @@ export default function Header() {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
 
   function handleHamburguerClick() {
-    setShowMobileMenu(!showMobileMenu);
+    setShowMobileMenu((prev) => !prev);
   }
+
   function handleArrowClick() {
     window.scrollTo({ top: 0 });
   }
@@ -31,25 +32,17 @@ export default function Header() {
             </S.LinkDiv>
           ) : (
             <div>
-              <S.HamburguerIcon
-                size="25"
-                onClick={() => handleHamburguerClick()}
-                show={showMobileMenu}
-              />
+              <S.HamburguerIcon size="25" onClick={() => handleHamburguerClick()} show={showMobileMenu} />
               <S.MobileMenu show={showMobileMenu}>
                 {navLinks.map((link) => (
-                  <S.MobileMenuLinks key={link.id} href={link.to}>
+                  <S.MobileMenuLinks key={link.id} href={link.to} onClick={() => setShowMobileMenu(false)}>
                     {link.label}
                   </S.MobileMenuLinks>
                 ))}
               </S.MobileMenu>
             </div>
           )}
-          <S.ArrowUpIcon
-            size="20"
-            onClick={() => handleArrowClick()}
-            show={showScrollTop ? "true" : "false"}
-          />
+          <S.ArrowUpIcon size="20" onClick={() => handleArrowClick()} show={showScrollTop ? "true" : "false"} />
         </S.List>
       </nav>
     </S.Container>

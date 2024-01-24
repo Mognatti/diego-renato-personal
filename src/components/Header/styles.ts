@@ -10,8 +10,7 @@ export const Container = styled.div<{ scrolling: string }>`
   align-items: center;
   position: sticky;
   top: 0;
-  background-color: ${(props) =>
-    props.scrolling === "true" ? `#121212` : "transparent"};
+  background-color: ${(props) => (props.scrolling === "true" ? `#121212` : "transparent")};
   z-index: 9999;
 `;
 
@@ -63,10 +62,7 @@ export const ArrowUpIcon = styled(BsArrowUp)<{ show: string }>`
 `;
 
 export const HamburguerIcon = styled(RxHamburgerMenu)<{ show: boolean }>`
-  color: ${(props) =>
-    props.show
-      ? `${props.theme.colors.secondary}`
-      : `${props.theme.colors.primary}`};
+  color: ${(props) => (props.show ? `${props.theme.colors.background}` : `${props.theme.colors.primary}`)};
   position: fixed;
   top: 24px;
   transition: 350ms;
@@ -79,12 +75,16 @@ export const HamburguerIcon = styled(RxHamburgerMenu)<{ show: boolean }>`
 export const MobileMenu = styled.div<{ show: boolean }>`
   display: ${(props) => (props.show ? "flex" : "none")};
   flex-direction: column;
-  gap: 1vh;
-  margin: 10vh 0 0 -2vw;
-  background-color: white;
-  width: 140px;
+  gap: 1vh 0;
+  margin-top: 12svh;
+  margin-left: -1svw;
+  background-color: ${(props) => props.theme.colors.primary};
+  width: 130px;
   border-radius: 8px;
   padding: 16px;
+  box-shadow: 0 0 15px ${(props) => props.theme.colors.secondary};
+  align-items: center;
+  justify-content: center;
   @media (max-width: ${breakingPoints.mobile}) {
     margin-left: 2vw;
     margin-top: 12vh;
@@ -92,8 +92,21 @@ export const MobileMenu = styled.div<{ show: boolean }>`
 `;
 
 export const MobileMenuLinks = styled.a`
-  color: ${(props) => props.theme.colors.secondary};
+  color: ${(props) => props.theme.colors.background};
   margin-left: 10vw;
   width: 85px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  &::after {
+    content: "";
+    width: 100%;
+    height: 5px;
+    border-bottom: 1px solid;
+  }
+  &:last-of-type {
+    &::after {
+      border: none;
+    }
+  }
 `;
