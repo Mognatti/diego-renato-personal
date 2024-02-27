@@ -24,7 +24,7 @@ export const opacityHex = {
 };
 
 export const breakingPoints = {
-  smallPC: "1024px",
+  smallPC: "1366px",
   bigTablet: "830px",
   smallTablet: "768px",
   bigPhone: "500px",

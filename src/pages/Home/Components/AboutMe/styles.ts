@@ -7,7 +7,7 @@ import { Container } from "../../../../styles/reusable";
 
 export const NewContainer = styled(Container)`
   height: 98vh;
-  @media (max-width: ${breakingPoints.bigTablet}) {
+  @media (max-width: ${breakingPoints.smallPC}) {
     height: fit-content;
     padding-bottom: 2vh;
   }
@@ -48,10 +48,10 @@ export const Text = styled.p`
   text-align: justify;
   font-size: ${(props) => props.theme.fontSize.highlight};
   @media (max-width: ${breakingPoints.smallPC}) {
-    font-size: 1.08em;
+    font-size: 1.2em;
   }
-  @media (max-width: ${breakingPoints.smallPC}) {
-    font-size: ${(porps) => porps.theme.fontSize.regular};
+  @media (max-width: ${breakingPoints.smallTablet}) {
+    font-size: 1em;
   }
 `;
 

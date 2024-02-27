@@ -79,8 +79,10 @@ export const List = styled.ul`
   @media (max-width: ${breakingPoints.bigTablet}) {
     margin: 0 0 2vh 0;
   }
-  @media (max-width: ${breakingPoints.bigPhone}) {
-    flex-wrap: wrap;
+  @media (max-width: ${breakingPoints.smallTablet}) {
+    margin: 0 0 8vh 0;
+  }
+  @media (max-width: 661px) {
     margin-bottom: -5vh;
   }
 `;
@@ -99,7 +101,7 @@ export const Item = styled.li`
   @media (max-width: ${breakingPoints.smallPC}) {
     width: 28%;
   }
-  @media (max-width: ${breakingPoints.bigPhone}) {
+  @media (max-width: 662px) {
     width: fit-content;
     height: fit-content;
   }
